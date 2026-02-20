@@ -1,0 +1,265 @@
+table 'Raw data'
+	lineageTag: da379342-c0a4-4c98-9108-59e0781164d8
+
+	measure 'Total Participants' = DISTINCTCOUNT('Raw data'[_id])
+		formatString: 0
+		lineageTag: c4c8a402-1fcd-4576-a72b-5a086188448d
+
+	measure '% Aware of Biodegradable Products' = DISTINCTCOUNT('Raw data'[section_two/use_biodegradable_products])
+		formatString: 0
+		lineageTag: 16f97fe0-af71-4cb2-b9d5-5bc19d980dcb
+
+	measure 'No. of products used' = AVERAGE('Raw data'[section_two/no_of_products])
+		formatString: 0
+		lineageTag: 09ef4789-7a49-4e5d-bbd6-db53f9db421b
+
+	column _id
+		dataType: string
+		lineageTag: 47b97822-6eff-481e-9532-58ede21f7f8a
+		summarizeBy: none
+		sourceColumn: _id
+
+		annotation SummarizationSetBy = Automatic
+
+	column formhub/uuid
+		dataType: string
+		lineageTag: 508f53ee-57e7-4776-a69a-edab83bd4384
+		summarizeBy: none
+		sourceColumn: formhub/uuid
+
+		annotation SummarizationSetBy = Automatic
+
+	column end
+		dataType: string
+		lineageTag: dcf3fa2e-2b31-4faf-8eaa-ed3f3810cacd
+		summarizeBy: none
+		sourceColumn: end
+
+		annotation SummarizationSetBy = Automatic
+
+	column consent/consent_participate
+		dataType: string
+		lineageTag: d256b456-e057-4f1f-a016-535d3f8542f0
+		summarizeBy: none
+		sourceColumn: consent/consent_participate
+
+		annotation SummarizationSetBy = Automatic
+
+	column section_one/gender
+		dataType: string
+		lineageTag: 808ed3e7-a9b2-479b-b224-2cfe114db4f8
+		summarizeBy: none
+		sourceColumn: section_one/gender
+
+		annotation SummarizationSetBy = Automatic
+
+	column section_one/participant_age
+		dataType: string
+		lineageTag: 85dd762e-f569-48d1-aa9d-f4da5ad6b8e1
+		summarizeBy: none
+		sourceColumn: section_one/participant_age
+
+		annotation SummarizationSetBy = Automatic
+
+	column section_one/occupation
+		dataType: string
+		lineageTag: 765b1f7f-388e-42cb-ae77-240d4ff5952a
+		summarizeBy: none
+		sourceColumn: section_one/occupation
+
+		annotation SummarizationSetBy = Automatic
+
+	column section_two/term_knowledge
+		dataType: string
+		lineageTag: 50c515c0-5bf9-4171-9dfb-25315ecb1e54
+		summarizeBy: none
+		sourceColumn: section_two/term_knowledge
+
+		annotation SummarizationSetBy = Automatic
+
+	column section_two/use_biodegradable_products
+		dataType: string
+		lineageTag: f3e79765-445d-45ab-a499-026994cbd935
+		summarizeBy: none
+		sourceColumn: section_two/use_biodegradable_products
+
+		annotation SummarizationSetBy = Automatic
+
+	column section_two/no_of_products
+		dataType: string
+		lineageTag: eefe5bc0-77d0-4880-8695-09f1948fc262
+		summarizeBy: none
+		sourceColumn: section_two/no_of_products
+
+		annotation SummarizationSetBy = Automatic
+
+	column section_two/use_challenges
+		dataType: string
+		lineageTag: 63ecc17c-dc45-4beb-ba14-758bc18e37d9
+		summarizeBy: none
+		sourceColumn: section_two/use_challenges
+
+		annotation SummarizationSetBy = Automatic
+
+	column section_three/biodegradable_product_importance
+		dataType: string
+		lineageTag: 79e14ca5-3f33-4db1-a594-d956906be29d
+		summarizeBy: none
+		sourceColumn: section_three/biodegradable_product_importance
+
+		annotation SummarizationSetBy = Automatic
+
+	column section_three/use_likelihood
+		dataType: string
+		lineageTag: c2718da0-4cc3-4a3b-9b48-12d1857351e8
+		summarizeBy: none
+		sourceColumn: section_three/use_likelihood
+
+		annotation SummarizationSetBy = Automatic
+
+	column section_three/reccomendation
+		dataType: string
+		lineageTag: 82c70f1a-aea3-4649-9196-7ae43bb79b44
+		summarizeBy: none
+		sourceColumn: section_three/reccomendation
+
+		annotation SummarizationSetBy = Automatic
+
+	column __version__
+		dataType: string
+		lineageTag: 83a6a3a8-307b-42c2-8b10-2b37646f6172
+		summarizeBy: none
+		sourceColumn: __version__
+
+		annotation SummarizationSetBy = Automatic
+
+	column meta/instanceID
+		dataType: string
+		lineageTag: 34152b74-8e27-4d02-a41e-290dd0f6076c
+		summarizeBy: none
+		sourceColumn: meta/instanceID
+
+		annotation SummarizationSetBy = Automatic
+
+	column _xform_id_string
+		dataType: string
+		lineageTag: 12068aad-f559-4cd3-a433-9aa1cdf40221
+		summarizeBy: none
+		sourceColumn: _xform_id_string
+
+		annotation SummarizationSetBy = Automatic
+
+	column _uuid
+		dataType: string
+		lineageTag: 7d21323d-73a9-4674-b162-c34764cef99e
+		summarizeBy: none
+		sourceColumn: _uuid
+
+		annotation SummarizationSetBy = Automatic
+
+	column meta/rootUuid
+		dataType: string
+		lineageTag: 55196131-bfe1-4457-8758-d0da776f55ce
+		summarizeBy: none
+		sourceColumn: meta/rootUuid
+
+		annotation SummarizationSetBy = Automatic
+
+	column _attachments
+		dataType: string
+		lineageTag: 8cd708d1-7a16-491a-afa3-08ddb2b1c376
+		summarizeBy: none
+		sourceColumn: _attachments
+
+		annotation SummarizationSetBy = Automatic
+
+	column _status
+		dataType: string
+		lineageTag: eca09716-a9d9-4ffc-b5ee-dfb49e73f782
+		summarizeBy: none
+		sourceColumn: _status
+
+		annotation SummarizationSetBy = Automatic
+
+	column _geolocation
+		dataType: string
+		lineageTag: 04df0474-b7c2-40de-ad93-30949c2d4796
+		summarizeBy: none
+		sourceColumn: _geolocation
+
+		annotation SummarizationSetBy = Automatic
+
+	column _submission_time
+		dataType: string
+		lineageTag: 6f8a035e-968f-4369-b41d-5f3ee97534e9
+		summarizeBy: none
+		sourceColumn: _submission_time
+
+		annotation SummarizationSetBy = Automatic
+
+	column _tags
+		dataType: string
+		lineageTag: 65f148f0-6894-4713-8703-428f2f0fd243
+		summarizeBy: none
+		sourceColumn: _tags
+
+		annotation SummarizationSetBy = Automatic
+
+	column _notes
+		dataType: string
+		lineageTag: 6f978ad0-8d29-4b28-b284-03eb2927ee1c
+		summarizeBy: none
+		sourceColumn: _notes
+
+		annotation SummarizationSetBy = Automatic
+
+	column _validation_status
+		dataType: string
+		lineageTag: 69dcec84-ba6d-4f24-b084-2a20b14f9375
+		summarizeBy: none
+		sourceColumn: _validation_status
+
+		annotation SummarizationSetBy = Automatic
+
+	column _submitted_by
+		dataType: string
+		lineageTag: 66dbd840-c71d-41a3-82af-31a0626c48f2
+		summarizeBy: none
+		sourceColumn: _submitted_by
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Raw data-9c24eb80-378e-4ae5-813c-1637fa590e99' = m
+		mode: import
+		source =
+				let
+				    FormUID = "aVBcKzpSwbgmTW3xHGFsw4",
+				    APIToken = "bc4619ab6348727ce58cbd53002c8281a1a00665",
+				
+				    Source = Json.Document(
+				        Web.Contents(
+				            "https://kf.kobotoolbox.org/api/v2/assets/" & FormUID & "/data/",
+				            [
+				                Headers = [
+				                    Authorization = "Token " & APIToken,
+				                    Accept = "application/json"
+				                ]
+				            ]
+				        )
+				    ),
+				
+				    Results = Source[results],
+				
+				    ToTable = Table.FromList(Results, Splitter.SplitByNothing(), null, null, ExtraValues.Error),
+				
+				    Expanded = Table.ExpandRecordColumn(ToTable, "Column1", Record.FieldNames(ToTable{0}[Column1])),
+				    #"Filtered Rows" = Table.SelectRows(Expanded, each ([#"section_two/use_challenges"] <> null)),
+				    #"Filtered Rows1" = Table.SelectRows(#"Filtered Rows", each true)
+				
+				in
+				    #"Filtered Rows1"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,136 @@
+table 'Data analysis'
+	lineageTag: 21a2076c-24e0-4324-a9a2-1ab885a9b0a4
+
+	measure 'Av. Products Used' = COUNT('Data analysis'[Number of biodegradable products used])
+		formatString: 0
+		lineageTag: 17d63124-03de-46f8-9a04-531f7384be0c
+
+	measure 'Av. Importance Score' = COUNT('Data analysis'[Importance of biodegradable products])
+		formatString: 0
+		lineageTag: f9080282-8a43-4677-a80e-7892f6379232
+
+	column _id
+		dataType: string
+		lineageTag: 13ac8054-4981-41b3-b743-e01d2c0948de
+		summarizeBy: none
+		sourceColumn: _id
+
+		annotation SummarizationSetBy = Automatic
+
+	column Gender
+		dataType: string
+		lineageTag: f63789fc-ef54-44c0-8174-8b306c981e10
+		summarizeBy: none
+		sourceColumn: Gender
+
+		annotation SummarizationSetBy = Automatic
+
+	column Age
+		dataType: string
+		lineageTag: 23232638-173b-4c36-acf0-d207ce999b9b
+		summarizeBy: none
+		sourceColumn: Age
+
+		annotation SummarizationSetBy = Automatic
+
+	column Occupation
+		dataType: string
+		lineageTag: 85310f92-7955-4bc2-b651-723435cf36c8
+		summarizeBy: none
+		sourceColumn: Occupation
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Used biodegradable products'
+		dataType: string
+		lineageTag: fdc39b4e-5dbf-4bef-8514-8eee64415b0d
+		summarizeBy: none
+		sourceColumn: Used biodegradable products
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Number of biodegradable products used'
+		dataType: string
+		lineageTag: 7cef3134-794e-458b-b9d2-918986b8a8fe
+		summarizeBy: none
+		sourceColumn: Number of biodegradable products used
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Importance of biodegradable products'
+		dataType: string
+		lineageTag: 6730c31c-bec9-49bc-bfe7-05e60b41ba47
+		summarizeBy: none
+		sourceColumn: Importance of biodegradable products
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Likelihood to use biodegradable products'
+		dataType: string
+		lineageTag: b61737b0-e25b-45d5-832d-07de7ce94ef4
+		summarizeBy: none
+		sourceColumn: Likelihood to use biodegradable products
+
+		annotation SummarizationSetBy = Automatic
+
+	column Recommendation
+		dataType: string
+		lineageTag: c4020424-1f47-42df-a9a4-156f75b8cd3a
+		summarizeBy: none
+		sourceColumn: Recommendation
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Challenges experienced in using biodegradable products.1'
+		dataType: string
+		lineageTag: 6b368729-acc9-444d-960e-b6b76d786f94
+		summarizeBy: none
+		sourceColumn: Challenges experienced in using biodegradable products.1
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Data analysis-c5e1c787-5c3c-4d6e-aae5-4914cff3e1b2' = m
+		mode: import
+		source =
+				let
+				    FormUID = "aVBcKzpSwbgmTW3xHGFsw4",
+				    APIToken = "bc4619ab6348727ce58cbd53002c8281a1a00665",
+				
+				    Source = Json.Document(
+				        Web.Contents(
+				            "https://kf.kobotoolbox.org/api/v2/assets/" & FormUID & "/data/",
+				            [
+				                Headers = [
+				                    Authorization = "Token " & APIToken,
+				                    Accept = "application/json"
+				                ]
+				            ]
+				        )
+				    ),
+				
+				    Results = Source[results],
+				
+				    ToTable = Table.FromList(Results, Splitter.SplitByNothing(), null, null, ExtraValues.Error),
+				
+				    Expanded = Table.ExpandRecordColumn(ToTable, "Column1", Record.FieldNames(ToTable{0}[Column1])),
+				    #"Filtered Rows" = Table.SelectRows(Expanded, each true),
+				    #"Removed Columns" = Table.RemoveColumns(#"Filtered Rows",{"consent/consent_participate", "section_two/term_knowledge"}),
+				    #"Renamed Columns" = Table.RenameColumns(#"Removed Columns",{{"section_two/use_challenges", "Challenges in using biodegradable products"}, {"section_one/gender", "Gender"}}),
+				    #"Capitalized Each Word" = Table.TransformColumns(#"Renamed Columns",{{"Gender", Text.Proper, type text}}),
+				    #"Renamed Columns1" = Table.RenameColumns(#"Capitalized Each Word",{{"section_one/occupation", "Occupation"}, {"section_two/use_biodegradable_products", "Used biodegradable products"}, {"section_two/no_of_products", "Number of biodegradable products used"}, {"section_one/participant_age", "Age"}, {"Challenges in using biodegradable products", "Challenges experienced in using biodegradable products"}, {"section_three/biodegradable_product_importance", "Importance of biodegradable products"}, {"section_three/use_likelihood", "Likelihood to use biodegradable products"}}),
+				    #"Capitalized Each Word1" = Table.TransformColumns(#"Renamed Columns1",{{"Likelihood to use biodegradable products", Text.Proper, type text}}),
+				    #"Renamed Columns2" = Table.RenameColumns(#"Capitalized Each Word1",{{"section_three/reccomendation", "Recommendation"}}),
+				    #"Capitalized Each Word2" = Table.TransformColumns(#"Renamed Columns2",{{"Challenges experienced in using biodegradable products", Text.Proper, type text}}),
+				    #"Split Column by Delimiter" = Table.SplitColumn(#"Capitalized Each Word2", "Challenges experienced in using biodegradable products", Splitter.SplitTextByDelimiter(" ", QuoteStyle.Csv), {"Challenges experienced in using biodegradable products.1", "Challenges experienced in using biodegradable products.2"}),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Split Column by Delimiter",{{"Challenges experienced in using biodegradable products.1", type text}, {"Challenges experienced in using biodegradable products.2", type text}}),
+				    #"Removed Columns1" = Table.RemoveColumns(#"Changed Type",{"formhub/uuid", "end"}),
+				    #"Capitalized Each Word3" = Table.TransformColumns(#"Removed Columns1",{{"Importance of biodegradable products", Text.Proper, type text}}),
+				    #"Removed Columns2" = Table.RemoveColumns(#"Capitalized Each Word3",{"__version__", "meta/instanceID", "_xform_id_string", "_uuid", "meta/rootUuid", "_status", "_submitted_by", "_validation_status", "_notes", "_tags", "_submission_time", "_geolocation", "_attachments", "Challenges experienced in using biodegradable products.2"}),
+				    #"Filtered Rows1" = Table.SelectRows(#"Removed Columns2", each ([Challenges experienced in using biodegradable products.1] <> null))
+				in
+				    #"Filtered Rows1"
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

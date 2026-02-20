@@ -1,0 +1,6 @@
+relationship 60460bd3-9c95-441f-a7bc-446a25e15193
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: 'Raw data (2)'._id
+	toColumn: 'Data analysis'._id
+

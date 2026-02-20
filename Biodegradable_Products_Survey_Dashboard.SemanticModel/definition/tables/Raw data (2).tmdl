@@ -1,0 +1,253 @@
+table 'Raw data (2)'
+	lineageTag: f8d97f22-c251-4312-9a80-6f73cca38c2e
+
+	column _id
+		dataType: string
+		lineageTag: 3085aab9-a09c-43f8-8829-91f0acfa8bd0
+		summarizeBy: none
+		sourceColumn: _id
+
+		annotation SummarizationSetBy = Automatic
+
+	column formhub/uuid
+		dataType: string
+		lineageTag: 86720963-c31a-44e0-bd3f-7a006a99dca3
+		summarizeBy: none
+		sourceColumn: formhub/uuid
+
+		annotation SummarizationSetBy = Automatic
+
+	column end
+		dataType: string
+		lineageTag: e20e6441-2b37-48b1-bed0-5c7f5f0f8baa
+		summarizeBy: none
+		sourceColumn: end
+
+		annotation SummarizationSetBy = Automatic
+
+	column consent/consent_participate
+		dataType: string
+		lineageTag: 66005686-52ed-4ebe-84ad-14970d074775
+		summarizeBy: none
+		sourceColumn: consent/consent_participate
+
+		annotation SummarizationSetBy = Automatic
+
+	column section_one/gender
+		dataType: string
+		lineageTag: 13bd201b-dee0-4300-96f4-3e557f67462c
+		summarizeBy: none
+		sourceColumn: section_one/gender
+
+		annotation SummarizationSetBy = Automatic
+
+	column section_one/participant_age
+		dataType: string
+		lineageTag: b14c86e9-3826-41a5-898a-af3e7ba60bed
+		summarizeBy: none
+		sourceColumn: section_one/participant_age
+
+		annotation SummarizationSetBy = Automatic
+
+	column section_one/occupation
+		dataType: string
+		lineageTag: 740587a9-1f0b-4176-91ee-57b92d3a0b9f
+		summarizeBy: none
+		sourceColumn: section_one/occupation
+
+		annotation SummarizationSetBy = Automatic
+
+	column section_two/term_knowledge
+		dataType: string
+		lineageTag: e892baad-7fe0-4bd1-bf14-486cded15c3e
+		summarizeBy: none
+		sourceColumn: section_two/term_knowledge
+
+		annotation SummarizationSetBy = Automatic
+
+	column section_two/use_biodegradable_products
+		dataType: string
+		lineageTag: 031d37c7-00ea-451b-8403-01565498bacd
+		summarizeBy: none
+		sourceColumn: section_two/use_biodegradable_products
+
+		annotation SummarizationSetBy = Automatic
+
+	column section_two/no_of_products
+		dataType: string
+		lineageTag: 4a1cbd22-1ed5-4601-9c03-848f1b569691
+		summarizeBy: none
+		sourceColumn: section_two/no_of_products
+
+		annotation SummarizationSetBy = Automatic
+
+	column section_two/use_challenges
+		dataType: string
+		lineageTag: 40086006-9d0f-4f6b-a3ea-632a5d1a092a
+		summarizeBy: none
+		sourceColumn: section_two/use_challenges
+
+		annotation SummarizationSetBy = Automatic
+
+	column section_three/biodegradable_product_importance
+		dataType: string
+		lineageTag: d8190db6-f5a8-467a-92a2-ecfb19bc8025
+		summarizeBy: none
+		sourceColumn: section_three/biodegradable_product_importance
+
+		annotation SummarizationSetBy = Automatic
+
+	column section_three/use_likelihood
+		dataType: string
+		lineageTag: bb85f15f-b561-462c-b0a0-2e0812ba331e
+		summarizeBy: none
+		sourceColumn: section_three/use_likelihood
+
+		annotation SummarizationSetBy = Automatic
+
+	column section_three/reccomendation
+		dataType: string
+		lineageTag: 70c9b4bb-bb78-45bf-a2f2-375ff2b4a6d3
+		summarizeBy: none
+		sourceColumn: section_three/reccomendation
+
+		annotation SummarizationSetBy = Automatic
+
+	column __version__
+		dataType: string
+		lineageTag: c201ccbe-accd-4bad-9585-787bc1a639f8
+		summarizeBy: none
+		sourceColumn: __version__
+
+		annotation SummarizationSetBy = Automatic
+
+	column meta/instanceID
+		dataType: string
+		lineageTag: 5f2e153e-b0c8-4734-a450-1b0fe7a95b6b
+		summarizeBy: none
+		sourceColumn: meta/instanceID
+
+		annotation SummarizationSetBy = Automatic
+
+	column _xform_id_string
+		dataType: string
+		lineageTag: 8972d906-f262-4da7-9aa9-5d29181c83eb
+		summarizeBy: none
+		sourceColumn: _xform_id_string
+
+		annotation SummarizationSetBy = Automatic
+
+	column _uuid
+		dataType: string
+		lineageTag: 3f49a3fe-fa9b-4b70-af51-61aa1ce4e5ed
+		summarizeBy: none
+		sourceColumn: _uuid
+
+		annotation SummarizationSetBy = Automatic
+
+	column meta/rootUuid
+		dataType: string
+		lineageTag: 1735a49a-26c6-4c13-91bb-e788cc489d16
+		summarizeBy: none
+		sourceColumn: meta/rootUuid
+
+		annotation SummarizationSetBy = Automatic
+
+	column _attachments
+		dataType: string
+		lineageTag: 5983287a-220c-4255-b410-7ac66d42b248
+		summarizeBy: none
+		sourceColumn: _attachments
+
+		annotation SummarizationSetBy = Automatic
+
+	column _status
+		dataType: string
+		lineageTag: a7608021-c88f-43ab-ad3f-fd310ba44852
+		summarizeBy: none
+		sourceColumn: _status
+
+		annotation SummarizationSetBy = Automatic
+
+	column _geolocation
+		dataType: string
+		lineageTag: 6c78898c-094a-4cd6-b8fc-372bde4024d9
+		summarizeBy: none
+		sourceColumn: _geolocation
+
+		annotation SummarizationSetBy = Automatic
+
+	column _submission_time
+		dataType: string
+		lineageTag: 9c6cac58-a9ea-4e9e-a157-e113eb674903
+		summarizeBy: none
+		sourceColumn: _submission_time
+
+		annotation SummarizationSetBy = Automatic
+
+	column _tags
+		dataType: string
+		lineageTag: a5d1e93e-690a-407d-98a9-92dca753ee86
+		summarizeBy: none
+		sourceColumn: _tags
+
+		annotation SummarizationSetBy = Automatic
+
+	column _notes
+		dataType: string
+		lineageTag: 64588a55-8118-4cc1-b6c3-6cc2998d156a
+		summarizeBy: none
+		sourceColumn: _notes
+
+		annotation SummarizationSetBy = Automatic
+
+	column _validation_status
+		dataType: string
+		lineageTag: d0d262b3-5b84-4893-b24f-ab2c9d18f1d0
+		summarizeBy: none
+		sourceColumn: _validation_status
+
+		annotation SummarizationSetBy = Automatic
+
+	column _submitted_by
+		dataType: string
+		lineageTag: 441fca61-84bd-44ac-8932-27398a858169
+		summarizeBy: none
+		sourceColumn: _submitted_by
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Raw data (2)-5ecde27f-8b30-458d-b046-7318b81986e7' = m
+		mode: import
+		source =
+				let
+				    FormUID = "aVBcKzpSwbgmTW3xHGFsw4",
+				    APIToken = "bc4619ab6348727ce58cbd53002c8281a1a00665",
+				
+				    Source = Json.Document(
+				        Web.Contents(
+				            "https://kf.kobotoolbox.org/api/v2/assets/" & FormUID & "/data/",
+				            [
+				                Headers = [
+				                    Authorization = "Token " & APIToken,
+				                    Accept = "application/json"
+				                ]
+				            ]
+				        )
+				    ),
+				
+				    Results = Source[results],
+				
+				    ToTable = Table.FromList(Results, Splitter.SplitByNothing(), null, null, ExtraValues.Error),
+				
+				    Expanded = Table.ExpandRecordColumn(ToTable, "Column1", Record.FieldNames(ToTable{0}[Column1])),
+				    #"Filtered Rows" = Table.SelectRows(Expanded, each ([#"section_two/use_challenges"] <> null)),
+				    #"Filtered Rows1" = Table.SelectRows(#"Filtered Rows", each true)
+				
+				in
+				    #"Filtered Rows1"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

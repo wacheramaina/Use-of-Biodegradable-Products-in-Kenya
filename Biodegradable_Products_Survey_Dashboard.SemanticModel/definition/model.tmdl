@@ -1,0 +1,21 @@
+model Model
+	culture: en-US
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: en-US
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation PBI_QueryOrder = ["Raw data","Data analysis","Raw data (2)"]
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table 'Raw data'
+ref table DateTableTemplate_4c147fee-80cf-477e-8455-7bbc8f5b864a
+ref table 'Data analysis'
+ref table 'Raw data (2)'
+
+ref cultureInfo en-US
+
