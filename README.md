@@ -14,8 +14,8 @@ The purpose of this survey was to assess awareness and use of biodegradable prod
 
 **Recommendations**
 1. Increase in awareness of biodegradable products is required. From survey results, those in formal employment have good knowledge of and have used biodegradable products. The awareness of biodegradable products should be increased by all stakeholders to ensure more people, even in informal sector are switching to biodegradable products use.
-2. Affordability of the products- Resources should be provided for innovative production of biodegradable products using locally found materials to reduce cost of production thus overall purchase cost of products.
-3. Segragation at disposal- Waste collection companies should adopt segragation of waste in their waste collection operations which will ensure proper handling of this waste and avoid it being disposed to landfills.
+2. Affordability of the products- Resources should be provided for innovative production of biodegradable products using locally sourced materials to reduce cost of production thus overall purchase cost of products.
+3. Segragation at disposal- Waste collection companies should adopt segragation of waste in their waste collection operations which will ensure proper handling of this type of waste and avoid it being disposed to landfills.
 
 **Technical Stack**
 
