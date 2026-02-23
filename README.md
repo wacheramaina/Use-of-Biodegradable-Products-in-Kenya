@@ -4,7 +4,6 @@ The purpose of this survey was to assess awareness and use of biodegradable prod
 <img width="620" height="342" alt="image" src="https://github.com/user-attachments/assets/e44a2ec0-d9d2-4371-a878-57844d790fe8" />
 <img width="618" height="264" alt="image" src="https://github.com/user-attachments/assets/8f617dd3-42db-45fc-8d76-677bdcaa6447" />
 <img width="624" height="367" alt="image" src="https://github.com/user-attachments/assets/1ec7586f-ac25-4161-86c1-e4a19e9d03cc" />
-
 Findings
 -100% of the participants who participated in this survey were aware on biodegradable products.
 -The participants had used nine biodegradable products on average.
