@@ -18,6 +18,6 @@ The purpose of this survey was to assess awareness and use of biodegradable prod
 3. Segragation at disposal- Waste collection companies should adopt segragation of waste in their waste collection operations which will ensure proper handling of this waste and avoid it being disposed to landfills.
 
 **Technical Stack**
-• Data Collection: KoboToolbox
-• Data Modeling: Power BI
-• Visualization: Power BI
+• Data Collection- KoboToolbox
+• Data Modeling- Power BI
+• Visualization- Power BI
